@@ -23,6 +23,7 @@ public class A1Novice {
 		
 			// declare total spent variable
 			double total = 0; 
+			String.format("%.2f", total); 
 			for (int j = 0; j < items; j++) {
 				
 				int quantity = scan.nextInt();
@@ -34,7 +35,7 @@ public class A1Novice {
 			}
 			
 			System.out.println(first.substring(0, 1) + ". " + last + ": "+ total);
-			String.format("%.2f", total); 
+			
 			
 			// print total spent 
 			
