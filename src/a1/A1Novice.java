@@ -32,6 +32,7 @@ public class A1Novice {
 				double cost = quantity * price;
 				total = total + cost;
 			}
+			String.format("%.2f", total);
 			System.out.println(first.substring(0, 1) + ". " + last + ": "+ total);
 	
 			
