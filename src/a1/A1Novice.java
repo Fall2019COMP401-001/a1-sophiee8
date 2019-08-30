@@ -39,11 +39,6 @@ public class A1Novice {
 			
 		}
 	}
-		//public static String add(int customers, String first, String last, int items, int quantity, String itemName, double price)
-		//double cost = quantity * price;
-		//double total = 0;
-		//for (int i = 0; i < items; i++) {
-			
-		}
-	}
+}
+
 
