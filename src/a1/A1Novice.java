@@ -8,7 +8,42 @@ public class A1Novice {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
 		
+		// Your code follows here.
+		int customers = scan.nextInt();
+		
+		
+		
+		for (int i = 0; i < customers; i++) {
+			String first = scan.next();
+			String last = scan.next();
+			
+			int items = scan.nextInt();
+			
+		
+			// declare total spent variable
+			double total = 0; 
+			for (int j = 0; j < items; j++) {
+				
+				int quantity = scan.nextInt();
+				String itemName = scan.next();
+				double price = scan.nextDouble();
+				// add to total spent
+				double cost = quantity * price;
+				total = total + cost;
+			}
+			System.out.println(first.substring(0, 1) + ". " + last + ": "+ total);
+	
+			
+			// print total spent 
+			
+		}
 	}
-}
+		//public static String add(int customers, String first, String last, int items, int quantity, String itemName, double price)
+		//double cost = quantity * price;
+		//double total = 0;
+		//for (int i = 0; i < items; i++) {
+			
+		}
+	}
+
