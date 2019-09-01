@@ -12,10 +12,8 @@ public class A1Novice {
 		// Your code follows here.
 		int customers = scan.nextInt();
 		
-		
-		
 		for (int i = 0; i < customers; i++) {
-			String first = scan.next();
+			String first  = scan.next();
 			String last = scan.next();
 			
 			int items = scan.nextInt();

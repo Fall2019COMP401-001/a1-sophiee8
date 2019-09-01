@@ -18,7 +18,7 @@ public class A1Adept {
 		
 		for (int i = 0; i < items; i++) {
 			itemTypes[i] = scan.next();
-			itemPrices[i] = scan.nextInt();
+			itemPrices[i] = scan.nextDouble();
 		}
 		
 		
@@ -28,7 +28,6 @@ public class A1Adept {
 		// make for loop, get first and last name, first name array, last name array
 		String[] nameOfCustomers = new String[totalCustomers];
 		double[] totalSpent = new double[totalCustomers];
-		int allExpenses = 0;
 		
 		for (int j = 0; j < totalCustomers; j++) {
 			nameOfCustomers[j] = scan.next() + " " + scan.next();
@@ -42,13 +41,13 @@ public class A1Adept {
 				
 				for (int l = 0; l < items; l++) {
 					if (singleItemName.equals(itemTypes[l])) {
-						cost = itemPrices[l] * singleItemQuantity; 
+						cost = itemPrices[l] * Double.valueOf(singleItemQuantity); 
 					}
-					totalSpent[j] += cost;
 				}
+				totalSpent[j] += cost;
+
 				
 			}
-			allExpenses += totalSpent[j];
 		}
 		int largestIndex = 0;
 		int smallestIndex = 0;
@@ -59,20 +58,20 @@ public class A1Adept {
 			}		
 			if (totalSpent[i] < totalSpent[smallestIndex]) {
 				smallestIndex = i;
-		}
+			}
 
 		}
 		scan.close();
-		int valueSum = 0;		
+		double valueSum = 0.0;		
 		for (int i=0; i<totalCustomers; i++) {
 				valueSum += totalSpent[i];
 			}
+		// names at biggest, customer totals at biggest
+				System.out.println("Biggest:" + " " + nameOfCustomers[largestIndex] + " (" + String.format("%.2f", totalSpent[largestIndex]) + ")");
+				System.out.println("Smallest:" + " " + nameOfCustomers[smallestIndex] + " (" + String.format("%.2f", totalSpent[smallestIndex]) + ")");
+				System.out.println("Average:" + " " + String.format("%.2f", (valueSum) / (Double.valueOf(totalCustomers))));
+				
 		}
-	
-	// names at biggest, customer totals at biggest
-		System.out.println("Biggest:" + nameOfCustomers[largestIndex] + String.format("%.2f", largestIndex)) 
-		System.out.println("Smallest:" + nameOfCustomers[smallestIndex] + String.format("%.2f", smallestIndex))
-		System.out.println("Average:" + String.format("%.2f", (valueSum / totalCustomers)));
 	}
 
 	
